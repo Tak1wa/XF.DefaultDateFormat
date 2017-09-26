@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GlobalDateFormat"
+             x:Class="GlobalDateFormat.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:MainPageViewModel />
+    </ContentPage.BindingContext>
+    
+    <StackLayout Orientation="Vertical">
+
+        <!--<Label x:Name="lblViewModel" Text="{Binding OutputString.Value}" />-->
+
+        <Label x:Name="lblView" Text="{Binding OutputDate.Value, StringFormat='{0:d}'}" />
+
+        <Button Text="Japanese" 
+                Command="{Binding CommandJapanese}"
+                Clicked="btnJapanese_Clicked"/>
+
+        <Button Text="English" 
+                Command="{Binding CommandEnglish}"
+                Clicked="btnEnglish_Clicked"/>
+
+        <Button Text="German" 
+                Command="{Binding CommandGerman}"
+                Clicked="btnGerman_Clicked"/>
+
+        <Button Text="French" 
+                Command="{Binding CommandFrench}"
+                Clicked="btnFrench_Clicked"/>
+
+        <Button Text="Italian" 
+                Command="{Binding CommandItalian}"
+                Clicked="btnItalian_Clicked"/>
+
+        <Button Text="Spanish" 
+                Command="{Binding CommandSpanish}"
+                Clicked="btnSpanish_Clicked"/>
+
+        <Button Text="Dutch" 
+                Command="{Binding CommandDutch}"
+                Clicked="btnDutch_Clicked"/>
+
+        <Button Text="Dialog" 
+                Clicked="btnDialog_Clicked"/>
+        
+    </StackLayout>
+
+</ContentPage>
